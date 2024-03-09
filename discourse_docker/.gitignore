@@ -2,7 +2,6 @@ shared/*
 *.swp
 *~
 \#*\#
-containers/
 cids/*
 bin/*
 image/.build.out
