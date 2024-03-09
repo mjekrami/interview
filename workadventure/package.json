@@ -1,0 +1,20 @@
+{
+  "name": "workadventure",
+  "private": true,
+  "devDependencies": {
+    "husky": "^7.0.1"
+  },
+  "scripts": {
+    "prepare": "husky install || echo 'Husky not found. Maybe you are installing only a subproject.'"
+  },
+  "workspaces": [
+    "play",
+    "back",
+    "chat",
+    "map-storage",
+    "libs/*",
+    "benchmark",
+    "uploader",
+    "play/packages/iframe-api-typings"
+  ]
+}
