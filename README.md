@@ -28,6 +28,7 @@ To run the Discourse app locally using Docker, follow these steps:
 
 6. **Single-Container Setup:**
    - For a single-container setup, you'll typically use the `standalone.yml` template.
+      Or you can start from scratch using `./discourse-setup` which prompts you to set your environment variables and automatically bootstraps a base image.
 
 7. **Multi-Container Setup:**
    - For a multi-container setup, you'll utilize templates such as `web_only.yml`, `data.yml`.
@@ -78,6 +79,7 @@ you need to find all the node_modules and delete them. use this command:
 find . -name "node_modules" -type d --exec rm -rf {} +
 ```
 3. ***Build and run the containers***
+Copy `.env.example` to `.env` and change the env variables to desired state.
 run `docker compose up -d` to build and run the containers
 4. ***Change the host file***
 The reverse proxy service uses `HostPath({domain})` to route the traffic into the coresponding service.
@@ -90,3 +92,4 @@ the `play.workadventure.localhost` is for application itself
 
 4. ***Access the Application***
 browse to `play.workadventure.localhost` and set your username. The Workadventure is up and running.
+<img src="workadventure.png">
