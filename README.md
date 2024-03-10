@@ -25,6 +25,9 @@ To run the Discourse app locally using Docker, follow these steps:
 5. **Run Docker Templates:**
    - The `discourse_docker` utilizes a templating engine written in Ruby to create Docker templates for running containers.
    - Explore the templates available in the `samples` directory to understand the configuration options.
+   - You need to copy the sample[s] you desire to the container directory for example:
+   - `cp samples/standalone.yml containers/'
+   - with this way the launcher would render the template and builds the image with exact same name of filename.
 
 6. **Single-Container Setup:**
    - For a single-container setup, you'll typically use the `standalone.yml` template.
