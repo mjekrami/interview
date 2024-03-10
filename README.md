@@ -81,7 +81,7 @@ the easiest way i found was this HaCkY method:
 psql
 \c discourse;
 update users set active=TRUE where username = '<your_username>';
-update email_tokens set cnofirmed=TRUE where email = '<your_email_address>';
+update email_tokens set confirmed=TRUE where email = '<your_email_address>';
 ```
 4. Check the admin panel on localhost/admin. You should see a page like this
 <img src="discourse-admin-panel.png">
