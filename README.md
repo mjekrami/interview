@@ -82,6 +82,7 @@ update email_tokens set cnofirmed=TRUE where email = '<your_email_address>';
 ```
 4. Check the admin panel on localhost/admin. You should see a page like this
 <img src="discourse-admin-panel.png">
+
 # Running Workadventure App Locally with Docker
 To run the Workadventure app locally using Docker compose, follow these steps:
 
