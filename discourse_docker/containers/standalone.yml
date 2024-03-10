@@ -22,7 +22,7 @@ templates:
 ## If you want Discourse to share a port with another webserver like Apache or nginx,
 ## see https://meta.discourse.org/t/17247 for details
 expose:
-  - "80:80"   # http
+  - "80:80" # http
   - "443:443" # https
 
 params:
@@ -50,7 +50,7 @@ env:
 
   ## TODO: The domain name this Discourse instance will respond to
   ## Required. Discourse will not work with a bare IP number.
-  DISCOURSE_HOSTNAME: 'discourse.example.com'
+  DISCOURSE_HOSTNAME: "localhost"
 
   ## Uncomment if you want the container to be started with the same
   ## hostname (-h option) as specified above (default "$hostname-$config")
@@ -58,18 +58,18 @@ env:
 
   ## TODO: List of comma delimited emails that will be made admin and developer
   ## on initial signup example 'user1@example.com,user2@example.com'
-  DISCOURSE_DEVELOPER_EMAILS: 'me@example.com,you@example.com'
+  DISCOURSE_DEVELOPER_EMAILS: "ekrami.devops@gmail.com"
 
   ## TODO: The SMTP mail server used to validate new accounts and send notifications
   # SMTP ADDRESS, username, and password are required
   # WARNING the char '#' in SMTP password can cause problems!
-  DISCOURSE_SMTP_ADDRESS: smtp.example.com
-  #DISCOURSE_SMTP_PORT: 587
-  DISCOURSE_SMTP_USER_NAME: user@example.com
-  DISCOURSE_SMTP_PASSWORD: pa$$word
-  #DISCOURSE_SMTP_ENABLE_START_TLS: true           # (optional, default true)
-  #DISCOURSE_SMTP_DOMAIN: discourse.example.com    # (required by some providers)
-  #DISCOURSE_NOTIFICATION_EMAIL: noreply@discourse.example.com    # (address to send notifications from)
+  DISCOURSE_SMTP_ADDRESS: smtp.gmail.com
+  DISCOURSE_SMTP_PORT: 587
+  DISCOURSE_SMTP_USER_NAME: mjavad.ekrami@gmail.com
+  DISCOURSE_SMTP_PASSWORD: Mamali1375!!
+  DISCOURSE_SMTP_ENABLE_START_TLS: true # (optional, default true)
+  DISCOURSE_SMTP_DOMAIN: gmail.com # (required by some providers)
+  DISCOURSE_NOTIFICATION_EMAIL: noreply@discourse.com # (address to send notifications from)
 
   ## If you added the Lets Encrypt template, uncomment below to get a free SSL certificate
   #LETSENCRYPT_ACCOUNT_EMAIL: me@example.com
@@ -77,7 +77,7 @@ env:
   ## The http or https CDN address for this Discourse instance (configured to pull)
   ## see https://meta.discourse.org/t/14857 for details
   #DISCOURSE_CDN_URL: https://discourse-cdn.example.com
-  
+
   ## The maxmind geolocation IP address key for IP address lookup
   ## see https://meta.discourse.org/t/-/137387/23 for details
   #DISCOURSE_MAXMIND_LICENSE_KEY: 1234567890123456

@@ -63,7 +63,25 @@ To run the Discourse app locally using Docker, follow these steps:
   ```
 10. **Access the Application:**
    - Once the containers are running, access the Discourse application by navigating to `http://localhost:80` in your web browser.
+    <img src="discourse-login.png">
 
+11. ***Email Verfication***
+If you are using a self hosted SMTP you are most likely fine to go. However using gmail as SMTP relay is complicated due to security implementations by Google.
+the easiest way i found was this HaCkY method:
+
+1. Attach to the container terminal that hosts Postgres database in my standalone case: 
+`docker exec -ti standalone bash`
+2. login as postgres user:
+`su postgres`
+3. connect to the database and change some records:
+```bash 
+psql
+\c discourse;
+update users set active=TRUE where username = '<your_username>';
+update email_tokens set cnofirmed=TRUE where email = '<your_email_address>';
+```
+4. Check the admin panel on localhost/admin. You should see a page like this
+<img src="discourse-admin-panel.png">
 # Running Workadventure App Locally with Docker
 To run the Workadventure app locally using Docker compose, follow these steps:
 
