@@ -64,6 +64,8 @@ To run the Discourse app locally using Docker, follow these steps:
   DISCOURSE_SMTP_DOMAIN: gmail.com
   DISCOURSE_NOTIFICATION_EMAIL: noreply@localhost
   ```
+  - you also need to change `DISCOURSE_HOST` to appropiate hostname in `/etc/hosts`. or you can leave it as `localhost`.
+
 10. **Access the Application:**
    - Once the containers are running, access the Discourse application by navigating to `http://localhost:80` in your web browser.
     <img src="discourse-login.png">
